@@ -19,7 +19,7 @@ class pkgRecipe(ConanFile):
 
     def requirements(self):
         self.requires("qt/5.15.16")
-        self.requires("opencv_enhanced/3.4.14")
+        # self.requires("opencv_enhanced/3.4.14")
 
     def layout(self):
         cmake_layout(self)

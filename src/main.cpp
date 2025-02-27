@@ -1,9 +1,5 @@
 #include <QApplication>
 #include <QWidget>
-#include <QNetworkAccessManager>
-#include <QSqlDatabase>
-#include <QGraphicsView>
-#include <QtCharts/QChartView>
 
 int main(int argc, char* argv[])
 {
