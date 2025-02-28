@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.15)
 project(mypkg CXX)
 
 set(CMAKE_CXX_STANDARD 17)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
@@ -10,7 +12,8 @@ file(GLOB_RECURSE HEADERS src/*.h)
 file(GLOB_RECURSE SOURCES src/*.cpp)
 file(GLOB_RECURSE UIFILES src/*.ui)
 file(GLOB_RECURSE RCCFILES src/*.qrc)
-add_executable(${PROJECT_NAME} ${HEADERS} ${SOURCES} ${UIFILES} ${RCCFILES})
+
+add_executable(${PROJECT_NAME} WIN32 ${HEADERS} ${SOURCES} ${UIFILES} ${RCCFILES})
 
 find_package(Qt5)
 
